@@ -8,17 +8,22 @@ root.title("First GUI")
 root.geometry(f"{height}x{width}+0+0")
 root.iconbitmap(r"C:\Users\gtush\OneDrive\Desktop\GUI\firstGUI\please-give-me-1.ico")
 
-text_box = tk.Text(root)
-text_box.pack()
-
 
 def click():
-    text1 = "Hi " + text_box.get('1.0', tk.END)
-    label.config(text=str(text1))
+    print(gender.get())
 
+
+gender = tk.StringVar()
+radio_btn1 = tk.Radiobutton(root, variable=gender, value="male", text="Male")
+
+radio_btn1.place(x=100, y=50)
+gender.set("Male")
+
+radio_btn1 = tk.Radiobutton(root, variable=gender, value="female", text="Female")
+radio_btn1.place(x=200, y=50)
 
 btn = tk.Button(root, command=click, text="Click")
-btn.pack()
+btn.place(x=150, y=150)
 label = tk.Label(root)
 label.pack()
 
