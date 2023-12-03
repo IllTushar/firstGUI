@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 
 root = tk.Tk()
 height = 500
@@ -14,15 +15,15 @@ def click():
 
 
 gender = tk.StringVar()
-radio_btn1 = tk.Radiobutton(root, variable=gender, value="male", text="Male")
+radio_btn1 = ttk.Radiobutton(root, variable=gender, value="male", text="Male")
 
 radio_btn1.place(x=100, y=50)
 gender.set("Male")
 
-radio_btn1 = tk.Radiobutton(root, variable=gender, value="female", text="Female")
+radio_btn1 = ttk.Radiobutton(root, variable=gender, value="female", text="Female")
 radio_btn1.place(x=200, y=50)
 
-btn = tk.Button(root, command=click, text="Click")
+btn = ttk.Button(root, command=click, text="Click")
 btn.place(x=150, y=150)
 label = tk.Label(root)
 label.pack()
